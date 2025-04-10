@@ -15,7 +15,6 @@ import { styles } from '../styles';
 import '../styles/home.css';
 import StarsCanvas from '../components/Stars';
 import LearnImage from '../assets/lic-term-insurance.png';
-import WhyUsImage from '../assets/utsav.png';
 
 import { useInView } from 'react-intersection-observer'; 
 import LicHeader from '../components/LicHeader';
@@ -169,195 +168,6 @@ const TypedText = styled.span`
 `;
 
 
-const HomeContainer = styled(motion.div)`
-  display: flex;
-  height: 50vh;
-  flex-direction: column;
-  align-items: center;
-  padding: 0rem;
-  box-sizing: border-box;
-  overflow-y: scroll;
-  position: relative;
-margin-bottom: 2rem;
- 
-  background-color: #050816; 
-
-  
-`;
-
-const FlexContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
-`;
-
-const F2 = styled.h1`
-  font-size: 3rem;
-  margin-bottom: 1rem;
-
-  font-weight: 900;
-  color: #2ecc71;
-  font-family: 'Playfair Display', serif;
-
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  transform: skew(-5deg); /* Apply a slight skew for a dynamic effect */
-  @media (max-width: 768px) {
-    font-size:2rem;
-    }
-`;
-
-const Text = styled.h1`
-  margin: 0;
-  font-size: 1.1rem;
-  color: #fff; 
-  text-align: left;
-  padding: 5px 10px; /* Padding to create space around the text */
-
-`;
-
-
-
-const ProfileImageContainer = styled.div`
-  flex-shrink: 0;
-
-  @media (min-width: 768px) {
-    order: 1;
-    margin-right: 2rem;
-
-    align-self: flex-start; /* Align the image to the start of the container on larger screens */
-  }
-  
-`;
-
-
-const BackgroundOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(25, 47, 62, 0.8), rgba(11, 19, 43, 0.8));
-  z-index: -1;
-`;
-
-
-const ProfileImage = styled(motion.img)`
-  width: 210px;
-  height: 210px;
-  margin-top: 2rem;
-  margin-left: 15rem;
-
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(255, 165, 0, 0.8), 0 0 20px rgba(255, 165, 0, 0.6);
-  transform-origin: center;
-  animation: heartbeat 1.5s infinite, rotateAndGlow 8s infinite, bounce 2s alternate infinite;
-
-  &.loading {
-    border: 2px solid transparent;
-    position: relative;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      z-index: 1;
-      border-radius: 50%;
-      border: 2px solid #fff; // Change the color as needed
-      animation: loadingAnimation 1.5s linear infinite;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 0;
-      height: 100%;
-      border-left: 2px dashed #fff; // Change the color as needed
-      animation: loadingLineAnimation 1.5s linear infinite;
-    }
-  }
-
-  @keyframes loadingAnimation {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes loadingLineAnimation {
-    0% {
-      height: 0;
-    }
-    50% {
-      height: 100%;
-    }
-    100% {
-      height: 0;
-    }
-  }
-
-
-
-
-  @media (max-width: 768px) {
-    width: 180px;
-    height: 180px;
-  margin-top : 2rem;
-    margin-left: 0.5rem;
-
-}
-
-  @keyframes heartbeat {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-  }
-
-  @keyframes rotateAndGlow {
-    0%, 100% {
-      transform: rotate(0deg) scale(1);
-      box-shadow: 0 0 10px rgba(255, 165, 0, 0.8), 0 0 20px rgba(255, 165, 0, 0.6);
-    }
-    25% {
-      transform: rotate(90deg) scale(1.2);
-      box-shadow: 0 0 15px rgba(255, 165, 0, 0.9), 0 0 30px rgba(255, 165, 0, 0.7);
-    }
-    50% {
-      transform: rotate(180deg) scale(1);
-      box-shadow: 0 0 10px rgba(255, 165, 0, 0.8), 0 0 20px rgba(255, 165, 0, 0.6);
-    }
-    75% {
-      transform: rotate(270deg) scale(1.2);
-      box-shadow: 0 0 15px rgba(255, 165, 0, 0.9), 0 0 30px rgba(255, 165, 0, 0.7);
-    }
-  }
-
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-15px);
-    }
-  }
-`;
-
-
 const images = [profileImage1];
 let currentImageIndex = 0;
 
@@ -431,98 +241,8 @@ const Introduction2 = styled(motion.p)`
   }
 `;
 
-const Onlyforlap = styled.div`
-
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-margin-right : 1rem;
-margin-left: 1rem;
-
-  @media (max-width: 768px) {
-    margin-top: 0rem;
-  
-  }
-`;
 
 
-const SocialIconsContainer = styled(motion.div)`
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 1rem;
-margin-top: 1rem;
-@media (max-width: 768px) {
-  display: none;
-  margin-top: 0rem;
-
-}
-
-`;
-const socialButtons = [
-  { icon: <FaTwitter />, label: "Twitter", link: "#" },
-  { icon: <FaInstagram />, label: "Instagram", link: "https://www.instagram.com/jay7268patidar" },
-];
-
-const SocialIcon = styled(motion.a)`
-display: flex;
-align-items: center;
-margin-top:4rem;
-justify-content: center;
-width: 3rem;
-height: 3rem;
-border-radius: 50%;
-background: ${props => props.color || '#ff6347'};
-cursor: pointer;
-overflow: hidden;
-position: relative;
-transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-  background 0.3s ease;
-
-&:hover {
-  transform: scale(1.2) rotate(360deg);
-  background: ${props => props.color || '#e74c3c'};
-}
-
-@media (max-width: 768px) {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-&:not(:last-child) {
-  margin-right: 1rem;
-}
-
-&:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom right,
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0)
-  );
-  transform: translateY(100%);
-  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border-radius: 50%;
-}
-
-&:hover:before {
-  transform: translateY(0);
-}
-
-/* Add a heartbeat animation for extra flair */
-animation: heartbeat 1.5s infinite;
-
-@keyframes heartbeat {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-`;
 
 function Home() {  
   
@@ -629,27 +349,29 @@ function Home() {
       description: 'Discover exciting career prospects at LIC India, where dedication and expertise meet to shape the future of insurance. Join our team and embark on a journey of growth and success in the dynamic world of life insurance.',
     },
     {
-      title: 'Dynamic Leadership with Jitendra Patidar: DO at LIC India',
-      description: 'Experience the leadership of Jitendra Patidar, Development Officer at LIC India. With a wealth of knowledge and a commitment to excellence, Jitendra leads by example, fostering innovation and growth within the LIC team.',
-    },
+      title: 'SmartServe DO – LIC DO Voice Chatbot (Neemuch, India) ',
+      description: 'SmartServe DO एक बहुभाषी एआई चैटबोट है जो एलआईसी विकास अधिकारियों को उनके ग्राहकों से बेहतर संवाद करने में मदद करता है। यह एलआईसी पॉलिसी को सरल भाषा में समझाता है, वॉइस रिकग्निशन सपोर्ट करता है, और लीड एंगेजमेंट को बढ़ाता है। चाहे आप एक एलआईसी अधिकारी हों या ग्राहक, यह प्लेटफार्म जीवन बीमा विकल्पों को समझने और शीघ्र जुड़ने का एक स्मार्ट तरीका है।' },
   ];
   
   const contentBlocks = [
   
     {
-      description: "LIC Neemuch is a branch of the Life Insurance Corporation of India, led by Jitendra Patidar as the Development Officer (DO). Jitendra helps people in Neemuch, Mandsaur, Ratangarh, Singoli, Manasa, Jawad and Sarwaniya Maharaj with their insurance needs. At LIC Neemuch, we focus on keeping families financially secure. With Jitendra's guidance, we provide simple and effective insurance options for everyone in these areas.",
+      description: "SmartServe DO is a multilingual AI-powered chatbot built to assist LIC Development Officers in communicating with their clients more efficiently. It helps explain LIC policies in simple language, supports voice-based queries, and boosts lead engagement through intelligent, real-time conversations.",
     },
-  ];  
+    {
+      description2: "Whether you're an LIC officer or a client, this platform offers a smoother way to understand life insurance options, stay informed, and connect faster.",
+    },
+  ]
   
 
   const contentBlockz = [
     {
-      title: "Jitendra Patidar: Development Officer (DO) at LIC Neemuch, INDIA"      ,
+      title: "SmartServe DO – LIC Chatbot Platform for Development Officers",
       description: 
-      "एलआईसी नीमच भारतीय जीवन बीमा निगम की एक शाखा है, जिसका प्रबंधन विकास अधिकारी (डीओ) के रूप में जितेंद्र पाटीदार द्वारा किया जाता है। यह शाखा नीमच, मंदसौर, रतनगढ़, सिंगोली, मनासा, जावद और सरवानीयाँ महाराज के लोगों की सेवा करती है। एलआईसी नीमच में, हम परिवारों की आर्थिक सुरक्षा पर जोर देते हैं। जितेंद्र के मार्गदर्शन में, हम इन क्षेत्रों में सरल और प्रभावी बीमा विकल्प प्रदान करते हैं, ताकि सभी लोग अपनी आर्थिक सुरक्षा को सुनिश्चित कर सकें।",
+      "LIC Neemuch is one of the many branches of the Life Insurance Corporation of India, serving clients across Neemuch, Mandsaur, Ratangarh, Singoli, Manasa, Jawad, and Sarwaniya Maharaj.",
     },
    
-  ];  
+  ]
   
   const sliderSettings = {
     dots: true,
@@ -694,29 +416,6 @@ function Home() {
     ],
   };
   const [animationEnabled, setAnimationEnabled] = useState(true);
-  const [imageLoading, setImageLoading] = useState(true);
-
-
-  const copyContactNumber = () => {
-    const contactNumber = document.getElementById('contactNumber');
-    const range = document.createRange();
-    range.selectNode(contactNumber);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    document.execCommand('copy');
-    window.getSelection().removeAllRanges();
-    alert('Contact number copied!');
-  };
-  const copyInstaID = () => {
-    const instaID = document.getElementById('instaID');
-    const range = document.createRange();
-    range.selectNode(instaID);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    document.execCommand('copy');
-    window.getSelection().removeAllRanges();
-    alert('Instagram ID copied!');
-  };
 
 
   
@@ -778,7 +477,7 @@ function Home() {
 
  <meta property="og:description" content="SmartServe DO is a multilingual AI chatbot designed for LIC Development Officers in Neemuch, India. Built with React.js, Gemini API, and voice recognition, it helps explain LIC policies, engage leads, and enhance client communication with real-time conversations." />
  <meta property="og:type" content="website" />
- <meta property="og:image:alt" content="Jitendra Patidar" />
+ <meta property="og:image:alt" content="Sanjay Patidar" />
 
  <meta name="twitter:card" content="summary_large_image" />
  <meta name="twitter:title" content="SmartServe DO | LIC Neemuch Life Insurance AI Chatbot | एलआईसी एजेंट स्मार्ट चैटबोट Neemuch | Mandsaur| Ratangarh |Deeken | Manasa| Jawad |Sarwaniya Maharaj MadyaPradesh|Life Insurance Corporation of India | भारतीय जीवन बीमा निगम " />
@@ -798,7 +497,7 @@ function Home() {
   <Slider {...sliderSettings}>
     <div className="w-full">
         <img
-          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/licheader1.jpg"
+          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/smartserve-do/banner1.jpg"
           alt="Image 1"
           className="w-full h-auto object-cover"
         />
@@ -806,7 +505,7 @@ function Home() {
       </div>
       <div className="w-full">
         <img
-          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/licheader2.jpg"
+          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/smartserve-do/banner2.jpg"
           alt="Image 2"
           className="w-full h-auto object-cover"
         />
@@ -814,7 +513,7 @@ function Home() {
 
       <div className="w-full">
         <img
-          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/licheader3.jpg"
+          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/smartserve-do/banner3.jpg"
           alt="Image 3"
           className="w-full h-auto object-cover"
         />
@@ -891,28 +590,9 @@ function Home() {
     </ContactButton>
   </Next>
 
-  <Next>
-    ☎ Jitendra Patidar LIC (DO) Neemuch (MP){" "}
-    <span className="light mobile-text">Contact</span>{" "}
-    <button
-      onClick={() => (window.location.href = "tel:+917987235207")}
-      style={{
-        marginLeft: "4px",
-        color: "#fff",
-        padding: "2px 4px",
-        border: "2px solid #ff6b6b",
-        borderRadius: "30px",
-        cursor: "pointer",
-        boxShadow: "0px 0px 10px #ffd700",
-      }}
-    >
-      Call Officer Now
-    </button>
-  </Next>
 
-  <ContactButton href="/contact-lic-officer-jitendra-patidar" smooth={true} duration={500}>
-    <ContactButtonText className="mobile-text">Feedback / Query</ContactButtonText>
-  </ContactButton>
+
+
 </div>;
 
   <div className="w-full max-w-6xl">
@@ -953,8 +633,10 @@ function Home() {
                      {block.description}
 
                      </Next> 
+                     <Next>     
+                     {block.description2}
 
-
+                     </Next> 
 
            </motion.div>
                   );
@@ -985,15 +667,16 @@ function Home() {
 
   <Typed
 strings={[
-  'जीवन बीमा कंपनी में नौकरी के अवसर हैं, तुरंत संपर्क करें।',
-  'बीमा क्षेत्र में नौकरी के लिए आवेदन करें, विकास अधिकारी की टीम में शामिल हों।',
-  'बीमा कंपनी के लिए अपनी योग्यता और कौशल का परीक्षण करें।',
-  'विकास अधिकारी की टीम में नौकरी पाने के लिए स्नातक योग्यता आवश्यक है।',
-  'बीमा कंपनी में कैरियर बनाएं, विकास अधिकारी के तहत काम करें।',
-  'बीमा कंपनी में नौकरी के लिए आवेदन करें, विकास अधिकारी के सहायक बनें।',
-  'विकास अधिकारी की टीम में शामिल होकर करियर को बढ़ावा दें।',
-  'बीमा कंपनी में प्रोफेशनल विकास के लिए विकास अधिकारी के साथ काम करें।',
+  'LIC विकास अधिकारी की टीम में शामिल होकर अपना उज्ज्वल भविष्य बनाएं।',
+  'बीमा क्षेत्र में स्थायी करियर के अवसर – आज ही आवेदन करें।',
+  'विकास अधिकारी के मार्गदर्शन में प्रोफेशनल ग्रोथ पाएं।',
+  'बीमा कंपनी में नौकरी के लिए स्नातक योग्यता आवश्यक है।',
+  'SmartServe DO के साथ अपने बीमा करियर की शुरुआत करें।',
+  'LIC टीम का हिस्सा बनें और अपने कौशल का सही उपयोग करें।',
+  'बीमा उद्योग में स्थायित्व और विकास की गारंटी – अभी जुड़ें।',
+  'ग्रामीण और शहरी क्षेत्रों में बीमा सेवा का हिस्सा बनें।'
 ]}
+
     typeSpeed={60}
     backSpeed={60}
     smartBackspace={true}
@@ -1010,125 +693,7 @@ strings={[
           
           </ProfileTextContainer>
    
-          <HomeContainer
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.7, ease: 'easeInOut' }}
-    >
-
-
-      <BackgroundOverlay />
-      <FlexContainer>
-
-      <ProfileImageContainer>
-        
-      <ProfileImage
-
-  src={profileImage1}
-  alt="jitendra patidar"
-  initial={{ y: -100, opacity: 0, filter: 'blur(10px)' }}
-  animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }}
-  transition={{ type: "spring", damping: 10, stiffness: 100, delay: 0.5 }}
-  className={`profile-image ${imageLoading ? 'loading' : ''}`}
-  onLoad={() => {
-    setImageLoading(false);
-  }}
-  onError={() => {
-    setImageLoading(true); 
-  }}
-/>
-
-
-<SocialIconsContainer>
-          {socialButtons.map((button, index) => (
-  <SocialIcon
-  key={index}
-  color={button.color}
-  initial={{ opacity: 0, y: -50, scale: 0, rotate: -180 }}
-  animate={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
-  exit={{ opacity: 0, y: -50 }}
-  transition={{ duration: 0.5, delay: index * 0.1 }}
-  href={button.link}
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label={button.label} 
->
-  {button.icon}
-</SocialIcon>
-
-          ))}
-          
-        </SocialIconsContainer>
-
-        <Onlyforlap>
-        <Introduction2>
-        <Next>
-  ☎ Jitendra Patidar <span className="light">Contact | Mobile Number : </span>{' '}
-  <a href="tel:+917987235207" id="contactNumber" style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }}>+91 7987 235 207</a> 📞 | OR |
-  
-  <button onClick={copyContactNumber} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }}>Copy Number</button>
-</Next>
-          
-<Next>
-  🔗 <span className="light">Jitendra Patidar's Instagram ID : </span>{' '}
-  <a href="https://www.instagram.com/jay7268patidar" style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }} id="instaIDAnchor" target="_blank" rel="noopener noreferrer">jay7268patidar</a>
-  {' '} | OR | {' '}
-  <button onClick={copyInstaID} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }} id="instaIDButton">Copy Insta ID</button>
-</Next>
-
-                <Next>              <span className="light">  LIC Development Officer (DO) | LIC Neemuch | भारतीय जीवन बीमा निगम (LIC) | Leader </span><br/>
-
-
-                </Next>
-
-  
-
-
-</Introduction2>
-
-  </Onlyforlap>
-        </ProfileImageContainer>
-  
-    
-      <ProfileTextContainer>
-
-       
-      <Introduction2
-  initial={{ opacity: 0, y: -100, rotate: -180, scale: 0.5 }} 
-  animate={{ opacity: 1, y: 0, rotate: 0, scale: 1 }} 
-  transition={{
-    type: "spring", 
-    stiffness: 200, 
-    damping: 12, 
-    delay: 1, 
-    duration: 0.8 
-  }}
->
-
-        Hi there! I'm{' '}
-    
-        <F2> Jitendra Patidar</F2>  
-        <span className="highlight">Development Officer</span><br/> 
-
-
-
-<Text>
-🙋‍♀️    Jitendra Patidar एलआईसी भारत में विकास अधिकारी (DO) हैं। <br/>
-<br/>
-</Text>
-
-
-<Text>➥  जितेंद्र एक दक्ष और अनुभवी पेशेवर हैं। उनकी कार्यक्षमता, संवादात्मक कौशल और टीम के साथ अच्छे संबंध ने LIC को उन्हें महत्वपूर्ण धाराओं में बनाए रखा है। </Text><br/>
-
-
-
-      </Introduction2>
-      </ProfileTextContainer>
-
-      </FlexContainer>
-  
-    </HomeContainer>
+      
     <LicChatBot/>
 
           <div className={`${styles.sectionHeadText} text-center mb-4`}>
