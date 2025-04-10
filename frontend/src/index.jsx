@@ -3,15 +3,15 @@ import { createRoot } from 'react-dom/client';
 import './styles/global.css';
 import App from './App';
 
-import { ThemeProvider } from '@/context/ThemeContext'; 
+import { AuthProvider } from './context/AuthContext';
 
 const rootElement = document.getElementById('root');
 
 const root = createRoot(rootElement);
 root.render(
   <React.StrictMode>
-   <ThemeProvider>
+   <AuthProvider>
       <App />
-    </ThemeProvider>
+    </AuthProvider>
   </React.StrictMode>
 );
