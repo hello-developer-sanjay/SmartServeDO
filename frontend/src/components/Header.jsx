@@ -286,13 +286,17 @@ const HamburgerMenu = styled.div`
 
 function Header() {
   const typedTexts = [
-    "Spark Minds",
-    "Explore Ideas",
-    "Unleash Cognizance",
-    "Nurture Genius",
-    "Awaken Insight",
-    "Brainwave Ballet"
+    "Policy Talks",
+    "Voice Connect",
+    "Chat Intellect",
+    "Insure Smart",
+    "Bima Saathi",
+    "Smart Guide",
+    "Trust Assist",
+    "Digital Dost",
+    "Secure Chat"
   ];
+  
 
   const [isOpen, setIsOpen] = useState(false);
   const [isToastVisible, setIsToastVisible] = useState(false);
@@ -321,10 +325,10 @@ const handleCareerInsightsClick = () => {
       <HeaderContent>
         <Link to="/">
         <Logo>
-            <LargeScreenText className="eduxcel-text">Jitendra Patidar | Development Officer
-</LargeScreenText>
-            <SmallScreenText className="eduxcel-text">Jitendra Patidar</SmallScreenText>
-          </Logo>
+  <LargeScreenText className="eduxcel-text">SmartServe DO | LIC Chat Assistant</LargeScreenText>
+  <SmallScreenText className="eduxcel-text">SmartServe DO</SmallScreenText>
+</Logo>
+
         </Link>
         <Typed strings={typedTexts} typeSpeed={40} backSpeed={40} loop />
       </HeaderContent>
