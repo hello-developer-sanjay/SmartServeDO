@@ -1,8 +1,7 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ThemeContext } from '@/context/ThemeContext';
 import { FaLinkedin, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
 
 // Enhanced animations
@@ -146,7 +145,12 @@ const DecorativeElement = styled.div`
 `;
 
 const Footer = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  // Local theme state instead of context
+  const [theme, setTheme] = useState('light');
+  
+  // Theme toggle function
+  const toggleTheme = () => setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
+
   const controls1 = useAnimation();
   const controls2 = useAnimation();
   const controls3 = useAnimation();
