@@ -462,34 +462,124 @@ function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  const faqData = [
+    {
+      '@type': 'Question',
+      name: 'What is SmartServe DO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SmartServe DO is a multilingual AI chatbot for LIC Development Officers to explain policies and engage clients.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does SmartServe DO benefit LIC Development Officers?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SmartServe DO automates client interactions, provides real-time policy insights, and supports voice input, enhancing efficiency and client engagement.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What technologies power SmartServe DO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SmartServe DO uses React.js, Gemini API, Tailwind CSS, and Vite for fast performance, multilingual support, and seamless user experiences.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does SmartServe DO help LIC Neemuch agents?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'For LIC Neemuch agents, SmartServe DO offers multilingual support and voice input to explain policies, improving client communication locally.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Who developed SmartServe DO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SmartServe DO was developed by Sanjay Patidar, a Software Engineer and Founder of Zedemy, specializing in AI-driven web solutions.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where can I learn more about SmartServe DO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Visit sanjay-patidar.vercel.app/projects to explore SmartServe DO details and other projects by Sanjay Patidar.',
+      },
+    },
+  ];
+
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: 'SmartServe DO | AI Chatbot for LIC',
+      description: 'SmartServe DO, an AI chatbot for LIC Development Officers, explains policies, engages clients, and boosts efficiency. Explore now.',
+      url: 'https://sanjay-patidar.vercel.app/smartserve-do',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': 'https://smartserve-do.vercel.app',
+      },
+      author: {
+        '@type': 'Person',
+        name: 'Sanjay Patidar',
+      },
+      publisher: {
+        '@type': 'Person',
+        name: 'Sanjay Patidar',
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqData,
+    },
+  ];
+
+
   return (
     <section className={`relative w-full  min-h-screen mx-auto`}>
   
 
-  <Helmet>
-  <title>SmartServe DO | LIC Neemuch Life Insurance AI Chatbot | एलआईसी एजेंट स्मार्ट चैटबोट Neemuch | Mandsaur| Ratangarh |Deeken | Manasa| Jawad |Sarwaniya Maharaj MadyaPradesh|Life Insurance Corporation of India | भारतीय जीवन बीमा निगम </title>
-
- <meta
-   name="description"
-   content="SmartServe DO is a multilingual AI chatbot designed for LIC Development Officers in Neemuch, India. Built with React.js, Gemini API, and voice recognition, it helps explain LIC policies, engage leads, and enhance client communication with real-time conversations."
- />
- 
-
- <meta property="og:description" content="SmartServe DO is a multilingual AI chatbot designed for LIC Development Officers in Neemuch, India. Built with React.js, Gemini API, and voice recognition, it helps explain LIC policies, engage leads, and enhance client communication with real-time conversations." />
- <meta property="og:type" content="website" />
- <meta property="og:image:alt" content="Sanjay Patidar" />
-
- <meta name="twitter:card" content="summary_large_image" />
- <meta name="twitter:title" content="SmartServe DO | LIC Neemuch Life Insurance AI Chatbot | एलआईसी एजेंट स्मार्ट चैटबोट Neemuch | Mandsaur| Ratangarh |Deeken | Manasa| Jawad |Sarwaniya Maharaj MadyaPradesh|Life Insurance Corporation of India | भारतीय जीवन बीमा निगम " />
- <meta name="twitter:site" content="@sanjaypatidar" />
- <meta name="twitter:creator" content="@sanjaypatidar" />
-
- <meta name="keywords" content="LIC India,Development Officer, Associate Development Officer, ADO,DO,life insurance, insurance solutions, financial security, retirement planning, wealth creation, insurance plans, financial goals, trusted insurance provider, customer service, financial literacy, financial inclusion, CSR initiatives, community support, financial empowerment, personalized service, expert guidance, comprehensive insurance coverage, financial well-being, trusted advisor, insurance policies, claims processing, educational initiatives, environmental sustainability, financial decisions, LIC agents, financial services, India's leading insurance company" />
- <meta name="author" content="Sanjay Patidar" />      
-    
-   
+   <Helmet>
+      <html lang="en" />
+      <title>SmartServe DO | AI Chatbot for LIC</title>
+      <meta
+        name="description"
+        content="SmartServe DO, an AI chatbot for LIC Development Officers, explains policies, engages clients, and boosts efficiency. Explore now."
+      />
+      <meta
+        name="keywords"
+        content="SmartServe DO, AI chatbot, LIC Development Officers, Sanjay Patidar, React.js, Gemini API, Neemuch LIC, life insurance, full-stack development"
+      />
+      <meta name="author" content="Sanjay Patidar" />
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="canonical" href="https://smartserve-do.vercel.app" />
+      <meta property="og:title" content="SmartServe DO | AI Chatbot for LIC" />
+      <meta
+        property=max-width: 100%
+        property="og:description"
+        content="SmartServe DO, an AI chatbot for LIC Development Officers, explains policies, engages clients, and boosts efficiency. Explore now."
+      />
+      <meta property="og:image:alt" content="SmartServe DO | AI Chatbot for LIC" />
+      <meta property="og:url" content="https://smartserve-do.vercel.app" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="SmartServe DO | AI Chatbot for LIC" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="SmartServe DO | AI Chatbot for LIC" />
+      <meta
+        name="twitter:description"
+        content="SmartServe DO, an AI chatbot for LIC Development Officers, explains policies, engages clients, and boosts efficiency. Explore now."
+      />
+      <meta name="twitter:site" content="@sanjaypatidar" />
+      <meta name="twitter:creator" content="@sanjaypatidar" />
+      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
     </Helmet>
-      
 
      <div className={`relative top-[10px] max-w-8xl mx-auto ${styles.paddingX} flex flex-col items-center`}>
   <div className="w-full max-w-4xl">
