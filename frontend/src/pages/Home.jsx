@@ -562,8 +562,9 @@ function Home() {
       <link rel="canonical" href="https://smartserve-do.vercel.app" />
       <meta property="og:title" content="SmartServe DO | AI Chatbot for LIC" />
       <meta
-        property=max-width: 100%
-        property="og:description"
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+     property="og:description"
         content="SmartServe DO, an AI chatbot for LIC Development Officers, explains policies, engages clients, and boosts efficiency. Explore now."
       />
       <meta property="og:image:alt" content="SmartServe DO | AI Chatbot for LIC" />
