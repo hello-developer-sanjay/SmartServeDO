@@ -517,7 +517,7 @@ function Home() {
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      name: 'SmartServe DO | AI Chatbot for LIC',
+      name: 'SmartServe DO | AI Chatbot for LIC | भारतीय जीवन बीमा निगम',
       description: 'SmartServe DO, an AI chatbot for LIC Development Officers, explains policies, engages clients, and boosts efficiency. Explore now.',
       url: 'https://smartserve-do.vercel.app',
       mainEntityOfPage: {
@@ -547,7 +547,7 @@ function Home() {
 
   <Helmet>
   <html lang="en" />
-  <title>SmartServe DO | AI Chatbot for LIC</title>
+  <title>SmartServe DO | AI Chatbot for LIC | भारतीय जीवन बीमा निगम</title>
   <meta
     name="description"
     content="SmartServe DO, an AI chatbot for LIC Development Officers, explains policies, engages clients, and boosts efficiency. Explore now."
@@ -560,17 +560,17 @@ function Home() {
   <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://smartserve-do.vercel.app" />
-  <meta property="og:title" content="SmartServe DO | AI Chatbot for LIC" />
+  <meta property="og:title" content="SmartServe DO | AI Chatbot for LIC | भारतीय जीवन बीमा निगम" />
   <meta
     property="og:description"
     content="SmartServe DO, an AI chatbot for LIC Development Officers, explains policies, engages clients, and boosts efficiency. Explore now."
   />
-  <meta property="og:image:alt" content="SmartServe DO | AI Chatbot for LIC" />
+  <meta property="og:image:alt" content="SmartServe DO | AI Chatbot for LIC | भारतीय जीवन बीमा निगम" />
   <meta property="og:url" content="https://smartserve-do.vercel.app" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="SmartServe DO | AI Chatbot for LIC" />
+  <meta property="og:site_name" content="SmartServe DO | AI Chatbot for LIC | भारतीय जीवन बीमा निगम" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SmartServe DO | AI Chatbot for LIC" />
+  <meta name="twitter:title" content="SmartServe DO | AI Chatbot for LIC | भारतीय जीवन बीमा निगम" />
   <meta
     name="twitter:description"
     content="SmartServe DO, an AI chatbot for LIC Development Officers, explains policies, engages clients, and boosts efficiency. Explore now."
