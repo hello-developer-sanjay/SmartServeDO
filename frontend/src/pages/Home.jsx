@@ -545,42 +545,42 @@ function Home() {
     <section className={`relative w-full  min-h-screen mx-auto`}>
   
 
-   <Helmet>
-      <html lang="en" />
-      <title>SmartServe DO | AI Chatbot for LIC</title>
-      <meta
-        name="description"
-        content="SmartServe DO, an AI chatbot for LIC Development Officers, explains policies, engages clients, and boosts efficiency. Explore now."
-      />
-      <meta
-        name="keywords"
-        content="SmartServe DO, AI chatbot, LIC Development Officers, Sanjay Patidar, React.js, Gemini API, Neemuch LIC, life insurance, full-stack development"
-      />
-      <meta name="author" content="Sanjay Patidar" />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="canonical" href="https://smartserve-do.vercel.app" />
-      <meta property="og:title" content="SmartServe DO | AI Chatbot for LIC" />
-      <meta
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta
-     property="og:description"
-        content="SmartServe DO, an AI chatbot for LIC Development Officers, explains policies, engages clients, and boosts efficiency. Explore now."
-      />
-      <meta property="og:image:alt" content="SmartServe DO | AI Chatbot for LIC" />
-      <meta property="og:url" content="https://smartserve-do.vercel.app" />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="SmartServe DO | AI Chatbot for LIC" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="SmartServe DO | AI Chatbot for LIC" />
-      <meta
-        name="twitter:description"
-        content="SmartServe DO, an AI chatbot for LIC Development Officers, explains policies, engages clients, and boosts efficiency. Explore now."
-      />
-      <meta name="twitter:site" content="@sanjaypatidar" />
-      <meta name="twitter:creator" content="@sanjaypatidar" />
-      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-    </Helmet>
+  <Helmet>
+  <html lang="en" />
+  <title>SmartServe DO | AI Chatbot for LIC</title>
+  <meta
+    name="description"
+    content="SmartServe DO, an AI chatbot for LIC Development Officers, explains policies, engages clients, and boosts efficiency. Explore now."
+  />
+  <meta
+    name="keywords"
+    content="SmartServe DO, AI chatbot, LIC Development Officers, Sanjay Patidar, React.js, Gemini API, Neemuch LIC, life insurance, full-stack development"
+  />
+  <meta name="author" content="Sanjay Patidar" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://smartserve-do.vercel.app" />
+  <meta property="og:title" content="SmartServe DO | AI Chatbot for LIC" />
+  <meta
+    property="og:description"
+    content="SmartServe DO, an AI chatbot for LIC Development Officers, explains policies, engages clients, and boosts efficiency. Explore now."
+  />
+  <meta property="og:image:alt" content="SmartServe DO | AI Chatbot for LIC" />
+  <meta property="og:url" content="https://smartserve-do.vercel.app" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SmartServe DO | AI Chatbot for LIC" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SmartServe DO | AI Chatbot for LIC" />
+  <meta
+    name="twitter:description"
+    content="SmartServe DO, an AI chatbot for LIC Development Officers, explains policies, engages clients, and boosts efficiency. Explore now."
+  />
+  <meta name="twitter:site" content="@sanjaypatidar" />
+  <meta name="twitter:creator" content="@sanjaypatidar" />
+  <script type="application/ld+json">
+    {JSON.stringify(structuredData)}
+  </script>
+</Helmet>
 
      <div className={`relative top-[10px] max-w-8xl mx-auto ${styles.paddingX} flex flex-col items-center`}>
   <div className="w-full max-w-4xl">
