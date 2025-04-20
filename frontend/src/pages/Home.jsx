@@ -519,7 +519,7 @@ function Home() {
       '@type': 'WebPage',
       name: 'SmartServe DO | AI Chatbot for LIC',
       description: 'SmartServe DO, an AI chatbot for LIC Development Officers, explains policies, engages clients, and boosts efficiency. Explore now.',
-      url: 'https://sanjay-patidar.vercel.app/smartserve-do',
+      url: 'https://smartserve-do.vercel.app',
       mainEntityOfPage: {
         '@type': 'WebPage',
         '@id': 'https://smartserve-do.vercel.app',
